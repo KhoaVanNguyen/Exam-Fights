@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-B8-D1s">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-B8-D1s" customClass="CustomView" customModule="ExamFights" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exam Fights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFX-7N-NJR">
@@ -164,7 +164,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI3-mo-W8F">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI3-mo-W8F" customClass="CustomView" customModule="ExamFights" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -235,6 +235,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextBtn:" destination="pKw-C1-lVx" eventType="touchUpInside" id="L9M-zL-wMd"/>
+                                    <segue destination="aiX-ZP-rgk" kind="show" id="foQ-rY-htS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -256,11 +257,90 @@
             </objects>
             <point key="canvasLocation" x="1061.5999999999999" y="122.78860569715144"/>
         </scene>
+        <!--Thi đấu-->
+        <scene sceneID="bq7-Dz-mVc">
+            <objects>
+                <viewController id="lIY-nD-lSC" customClass="RoomVC" customModule="ExamFights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xwY-39-q55"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Yo-Ru-1w4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5LH-vW-VGZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Thi đấu" image="fight" id="0Ru-HU-atQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jv9-gC-FOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1937" y="889"/>
+        </scene>
+        <!--Hồ Sơ-->
+        <scene sceneID="0eK-cb-Cvp">
+            <objects>
+                <viewController id="ZU8-87-ymN" customClass="ProfileVC" customModule="ExamFights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tDM-4c-jOO"/>
+                        <viewControllerLayoutGuide type="bottom" id="kpb-Wt-iEs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7e3-To-ulE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hồ Sơ" image="profile_btn" id="OpK-X2-FlX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Joe-0y-91f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2650" y="888"/>
+        </scene>
+        <!--Trang chủ-->
+        <scene sceneID="m5W-YE-bJN">
+            <objects>
+                <viewController id="5Zu-ul-hmS" customClass="Home" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bsz-kn-PRY"/>
+                        <viewControllerLayoutGuide type="bottom" id="fAO-gr-n99"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8TB-GO-lmL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Trang chủ" image="home_btn" id="Gbv-EM-miZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWo-bp-h0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="889"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="S50-gm-ixl">
+            <objects>
+                <tabBarController id="aiX-ZP-rgk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="1nh-Qp-CFd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5Zu-ul-hmS" kind="relationship" relationship="viewControllers" id="8hN-vc-dRB"/>
+                        <segue destination="lIY-nD-lSC" kind="relationship" relationship="viewControllers" id="ue5-Hf-de8"/>
+                        <segue destination="ZU8-87-ymN" kind="relationship" relationship="viewControllers" id="86V-gV-3Es"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9r-7a-SPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="123"/>
+        </scene>
     </scenes>
     <resources>
         <image name="check" width="64" height="64"/>
         <image name="facebook" width="64" height="64"/>
+        <image name="fight" width="25" height="25"/>
         <image name="gaming" width="512" height="512"/>
+        <image name="home_btn" width="24" height="28"/>
         <image name="math" width="726" height="482"/>
+        <image name="profile_btn" width="28" height="28"/>
     </resources>
 </document>
