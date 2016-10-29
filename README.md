@@ -10,12 +10,12 @@ Các tính năng chính:
 - Bảng xếp hạng người dùng có thành tích cao
 
 Login Screen:
-![Alt text](screenshots/login.png =750x1334)
+![Alt text](screenshots/login.png =320x480)
 
 Home Screen:
 
-![Alt text](screenshots/home.png =750x1334)
+![Alt text](screenshots/home.png =320x480)
 
 Fight Screen:
 
-![Alt text](screenshots/fight.png =750x1334)
+![Alt text](screenshots/fight.png =320x480)
