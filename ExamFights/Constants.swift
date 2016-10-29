@@ -10,3 +10,9 @@ import Foundation
 
 
 //let SHADOW_GRAY : CGFloat = 125.0 / 255.0
+
+
+let STATUS_USER_NOTFOUND = 17011
+
+
+let USER_ID = "uid"

@@ -15,8 +15,18 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (  UserDefaults.standard.value(forKey: USER_ID) != nil  ){
+            print("Save UID")
+            performSegue(withIdentifier: "ChooseTopic", sender: nil)
+        }
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if (  UserDefaults.standard.value(forKey: USER_ID) != nil  ){
+            print("Save UID")
+            performSegue(withIdentifier: "ChooseTopic", sender: nil)
+        }
+    }
     @IBAction func loginBtn(_ sender: Any) {
        
         if let email = emailTF.text, let password = passwordTF.text
@@ -24,24 +34,31 @@ class LoginVC: UIViewController {
             
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (FIRUser, error) in
                 if error != nil{
-                    print("Login error")
+                    print("Login error: \(error) ")
+                    if( (error as! NSError).code == STATUS_USER_NOTFOUND){
+                    // user not found
+                        print("User not found")
+                        
+                    }
+                    
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (newUser, error) in
                         print("Create user successfully!")
+                        self.performSegue(withIdentifier: "ChooseTopic", sender: nil)
+ 
                     })
-                }else{
+                    }
+                    else{
                     // perform segue
-                    
                     print("Login successfully!")
+                    UserDefaults.standard.setValue(FIRUser?.uid, forKey: USER_ID)
+                    self.performSegue(withIdentifier: "ChooseTopic", sender: nil)
+                    
                     
                 }
                 
             })
             
         }
-        
-        
-        
-        
         
     }
 

@@ -18,6 +18,9 @@
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
         </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--LoginVC-->
@@ -42,10 +45,10 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login to fight with your friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Er-Hfw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đăng nhập để thi đấu cùng bạn bè" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Er-Hfw">
                                         <rect key="frame" x="37" y="156" width="300" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -84,25 +87,56 @@
                                     <constraint firstAttribute="height" constant="40" id="ElA-No-bk9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Đăng nhập">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSV-2c-tDV"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-d8-S7o">
+                                <rect key="frame" x="0.0" y="616" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="T7z-Zs-5bM"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="BzF-nL-x0K">
+                                <rect key="frame" x="40" y="620" width="58" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="Hbp-im-HBB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập với Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z55-xj-Fhi">
+                                <rect key="frame" x="102" y="628" width="236" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="NPq-ZU-pVx"/>
+                                    <constraint firstAttribute="height" constant="21" id="lo8-kE-NXV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eDE-d8-S7o" secondAttribute="bottom" constant="50" id="0aO-eD-o9p"/>
                             <constraint firstItem="Pd1-wU-3RR" firstAttribute="top" secondItem="XyZ-Y5-ZHA" secondAttribute="bottom" constant="38" id="6MT-Mw-Hu2"/>
                             <constraint firstItem="XyZ-Y5-ZHA" firstAttribute="top" secondItem="Pf8-B8-D1s" secondAttribute="bottom" constant="80" id="7Ug-Hr-1O4"/>
+                            <constraint firstItem="z55-xj-Fhi" firstAttribute="leading" secondItem="BzF-nL-x0K" secondAttribute="trailing" constant="4" id="9jl-0T-YBC"/>
                             <constraint firstItem="Ono-g0-f6C" firstAttribute="top" secondItem="Pd1-wU-3RR" secondAttribute="bottom" constant="40" id="Aoc-lG-mPA"/>
                             <constraint firstAttribute="trailing" secondItem="XyZ-Y5-ZHA" secondAttribute="trailing" constant="40" id="CEr-0I-0mf"/>
                             <constraint firstItem="Pf8-B8-D1s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F4o-ed-5js"/>
+                            <constraint firstItem="z55-xj-Fhi" firstAttribute="top" secondItem="eDE-d8-S7o" secondAttribute="bottom" constant="11" id="MIV-Wg-FT9"/>
                             <constraint firstItem="Pf8-B8-D1s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NjR-iV-1qB"/>
+                            <constraint firstItem="BzF-nL-x0K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="NvU-qP-7UF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BzF-nL-x0K" secondAttribute="bottom" constant="3" id="RAl-2Y-p1Y"/>
                             <constraint firstItem="Ono-g0-f6C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="W7t-uC-m7Y"/>
                             <constraint firstAttribute="trailing" secondItem="Ono-g0-f6C" secondAttribute="trailing" constant="40" id="b5V-vW-Jye"/>
                             <constraint firstAttribute="trailing" secondItem="Pf8-B8-D1s" secondAttribute="trailing" id="dgQ-qA-Rub"/>
+                            <constraint firstItem="BzF-nL-x0K" firstAttribute="top" secondItem="eDE-d8-S7o" secondAttribute="bottom" constant="3" id="iHi-xp-9sx"/>
+                            <constraint firstItem="eDE-d8-S7o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jlq-bW-IaE"/>
+                            <constraint firstAttribute="trailing" secondItem="eDE-d8-S7o" secondAttribute="trailing" id="pl5-PD-Z3g"/>
                             <constraint firstItem="XyZ-Y5-ZHA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="xYU-X3-Yl3"/>
                             <constraint firstAttribute="trailing" secondItem="Pd1-wU-3RR" secondAttribute="trailing" constant="40" id="xo0-yH-9f5"/>
                             <constraint firstItem="Pd1-wU-3RR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="yq3-s8-q8I"/>
@@ -111,14 +145,101 @@
                     <connections>
                         <outlet property="emailTF" destination="XyZ-Y5-ZHA" id="HcU-JR-pSc"/>
                         <outlet property="passwordTF" destination="Pd1-wU-3RR" id="KH4-I0-32Q"/>
+                        <segue destination="pKw-C1-lVx" kind="show" identifier="ChooseTopic" id="tS6-73-udG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
+        <!--Choose TopicVC-->
+        <scene sceneID="pVI-jS-zAo">
+            <objects>
+                <viewController id="pKw-C1-lVx" customClass="ChooseTopicVC" customModule="ExamFights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nd2-Hf-6Wx"/>
+                        <viewControllerLayoutGuide type="bottom" id="sxU-Ma-d7k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xpj-Da-RzP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI3-mo-W8F">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SAL-Nv-X2f"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn môn học bạn quan tâm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0d-gg-zpc">
+                                <rect key="frame" x="12" y="80" width="351" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ar3-Rq-Wii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yqs-LG-gzw">
+                                <rect key="frame" x="16" y="173" width="332" height="369"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g7m-PM-btF">
+                                    <size key="itemSize" width="110" height="107"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopicCell" id="QGt-eE-Vfr" customClass="TopicCell" customModule="ExamFights" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="107"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-4W-cwz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="math" translatesAutoresizingMaskIntoConstraints="NO" id="vTc-qv-mWc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="topicImage" destination="vTc-qv-mWc" id="5kP-W4-XRa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qI3-mo-W8F" firstAttribute="leading" secondItem="Xpj-Da-RzP" secondAttribute="leading" id="2Oh-5z-KCg"/>
+                            <constraint firstItem="qI3-mo-W8F" firstAttribute="top" secondItem="Xpj-Da-RzP" secondAttribute="top" id="BEP-sg-2Vj"/>
+                            <constraint firstItem="F0d-gg-zpc" firstAttribute="leading" secondItem="Xpj-Da-RzP" secondAttribute="leading" constant="12" id="VWc-Yu-jHc"/>
+                            <constraint firstAttribute="trailing" secondItem="qI3-mo-W8F" secondAttribute="trailing" id="fFc-f9-q3B"/>
+                            <constraint firstItem="F0d-gg-zpc" firstAttribute="top" secondItem="qI3-mo-W8F" secondAttribute="bottom" constant="20" id="qTb-ow-NZf"/>
+                            <constraint firstAttribute="trailing" secondItem="F0d-gg-zpc" secondAttribute="trailing" constant="12" id="yZe-05-U1x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Yqs-LG-gzw" id="qpl-rL-B1I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFt-21-hly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5999999999999" y="122.78860569715144"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="facebook" width="64" height="64"/>
         <image name="gaming" width="512" height="512"/>
+        <image name="math" width="726" height="482"/>
     </resources>
 </document>

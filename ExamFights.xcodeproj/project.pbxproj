@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D269B6271DC448C300FEE448 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269B6261DC448C300FEE448 /* CustomButton.swift */; };
 		D269B6291DC44AAC00FEE448 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269B6281DC44AAC00FEE448 /* DataService.swift */; };
+		D2ACF8B91DC45A000059A501 /* ChooseTopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8B81DC45A000059A501 /* ChooseTopicVC.swift */; };
+		D2ACF8BB1DC45ABE0059A501 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8BA1DC45ABE0059A501 /* TopicCell.swift */; };
+		D2ACF8BE1DC462740059A501 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8BD1DC462740059A501 /* CircleImage.swift */; };
 		D2F11D6C1DC43EC10071955D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F11D6B1DC43EC10071955D /* AppDelegate.swift */; };
 		D2F11D6E1DC43EC10071955D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F11D6D1DC43EC10071955D /* LoginVC.swift */; };
 		D2F11D711DC43EC10071955D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F11D6F1DC43EC10071955D /* Main.storyboard */; };
@@ -35,6 +38,10 @@
 		298D340B3B772AFE0E914B0E /* Pods-ExamFights.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamFights.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExamFights/Pods-ExamFights.debug.xcconfig"; sourceTree = "<group>"; };
 		D269B6261DC448C300FEE448 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D269B6281DC44AAC00FEE448 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D2ACF8B81DC45A000059A501 /* ChooseTopicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTopicVC.swift; sourceTree = "<group>"; };
+		D2ACF8BA1DC45ABE0059A501 /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
+		D2ACF8BC1DC461260059A501 /* ExamFights.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExamFights.entitlements; sourceTree = "<group>"; };
+		D2ACF8BD1DC462740059A501 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		D2F11D681DC43EC10071955D /* ExamFights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamFights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F11D6B1DC43EC10071955D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F11D6D1DC43EC10071955D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -106,6 +113,8 @@
 		D2F11D6A1DC43EC10071955D /* ExamFights */ = {
 			isa = PBXGroup;
 			children = (
+				D2ACF8BC1DC461260059A501 /* ExamFights.entitlements */,
+				D269B6281DC44AAC00FEE448 /* DataService.swift */,
 				D2F11D6B1DC43EC10071955D /* AppDelegate.swift */,
 				D2F11D9A1DC447490071955D /* Constants.swift */,
 				D2F11D821DC4425D0071955D /* Controllers */,
@@ -117,7 +126,6 @@
 				D2F11D741DC43EC10071955D /* LaunchScreen.storyboard */,
 				D2F11D771DC43EC10071955D /* Info.plist */,
 				D2F11D7D1DC440D00071955D /* GoogleService-Info.plist */,
-				D269B6281DC44AAC00FEE448 /* DataService.swift */,
 			);
 			path = ExamFights;
 			sourceTree = "<group>";
@@ -151,6 +159,8 @@
 			children = (
 				D2F11D971DC443DE0071955D /* CustomTF.swift */,
 				D269B6261DC448C300FEE448 /* CustomButton.swift */,
+				D2ACF8BA1DC45ABE0059A501 /* TopicCell.swift */,
+				D2ACF8BD1DC462740059A501 /* CircleImage.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D2F11D6D1DC43EC10071955D /* LoginVC.swift */,
+				D2ACF8B81DC45A000059A501 /* ChooseTopicVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +211,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = WG937QNZTU;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -299,8 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F11D6E1DC43EC10071955D /* LoginVC.swift in Sources */,
+				D2ACF8BB1DC45ABE0059A501 /* TopicCell.swift in Sources */,
+				D2ACF8B91DC45A000059A501 /* ChooseTopicVC.swift in Sources */,
 				D2F11D6C1DC43EC10071955D /* AppDelegate.swift in Sources */,
 				D2F11D981DC443DE0071955D /* CustomTF.swift in Sources */,
+				D2ACF8BE1DC462740059A501 /* CircleImage.swift in Sources */,
 				D269B6291DC44AAC00FEE448 /* DataService.swift in Sources */,
 				D2F11D9B1DC447490071955D /* Constants.swift in Sources */,
 				D269B6271DC448C300FEE448 /* CustomButton.swift in Sources */,
@@ -427,6 +446,7 @@
 			baseConfigurationReference = 298D340B3B772AFE0E914B0E /* Pods-ExamFights.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ExamFights/ExamFights.entitlements;
 				DEVELOPMENT_TEAM = WG937QNZTU;
 				INFOPLIST_FILE = ExamFights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -441,6 +461,7 @@
 			baseConfigurationReference = 0F9929501AE358D6F53C2162 /* Pods-ExamFights.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ExamFights/ExamFights.entitlements;
 				DEVELOPMENT_TEAM = WG937QNZTU;
 				INFOPLIST_FILE = ExamFights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
