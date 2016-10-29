@@ -17,6 +17,10 @@
 		D2ACF8C41DC491BA0059A501 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8C31DC491BA0059A501 /* HomeVC.swift */; };
 		D2ACF8C61DC491CB0059A501 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8C51DC491CB0059A501 /* ProfileVC.swift */; };
 		D2ACF8C81DC491E10059A501 /* RoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8C71DC491E10059A501 /* RoomVC.swift */; };
+		D2ACF8CB1DC4B0340059A501 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2ACF8C91DC4B0340059A501 /* Pokemon Hollow.ttf */; };
+		D2ACF8CC1DC4B0340059A501 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2ACF8CA1DC4B0340059A501 /* Pokemon Solid.ttf */; };
+		D2ACF8CE1DC4B0CC0059A501 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8CD1DC4B0CC0059A501 /* AnswerCell.swift */; };
+		D2ACF8D01DC4B1A00059A501 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8CF1DC4B1A00059A501 /* Question.swift */; };
 		D2F11D6C1DC43EC10071955D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F11D6B1DC43EC10071955D /* AppDelegate.swift */; };
 		D2F11D6E1DC43EC10071955D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F11D6D1DC43EC10071955D /* LoginVC.swift */; };
 		D2F11D711DC43EC10071955D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F11D6F1DC43EC10071955D /* Main.storyboard */; };
@@ -52,6 +56,10 @@
 		D2ACF8C31DC491BA0059A501 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		D2ACF8C51DC491CB0059A501 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		D2ACF8C71DC491E10059A501 /* RoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomVC.swift; sourceTree = "<group>"; };
+		D2ACF8C91DC4B0340059A501 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		D2ACF8CA1DC4B0340059A501 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		D2ACF8CD1DC4B0CC0059A501 /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		D2ACF8CF1DC4B1A00059A501 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D2F11D681DC43EC10071955D /* ExamFights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamFights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F11D6B1DC43EC10071955D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F11D6D1DC43EC10071955D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -143,6 +151,8 @@
 		D2F11D7F1DC4424F0071955D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2ACF8C91DC4B0340059A501 /* Pokemon Hollow.ttf */,
+				D2ACF8CA1DC4B0340059A501 /* Pokemon Solid.ttf */,
 				D2F11D831DC442750071955D /* OpenSans-Bold.ttf */,
 				D2F11D841DC442750071955D /* OpenSans-BoldItalic.ttf */,
 				D2F11D851DC442750071955D /* OpenSans-ExtraBold.ttf */,
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				D2ACF8BF1DC480D70059A501 /* QuestionType.swift */,
+				D2ACF8CF1DC4B1A00059A501 /* Question.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -169,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D2F11D971DC443DE0071955D /* CustomTF.swift */,
+				D2ACF8CD1DC4B0CC0059A501 /* AnswerCell.swift */,
 				D2ACF8C11DC48CC20059A501 /* CustomView.swift */,
 				D269B6261DC448C300FEE448 /* CustomButton.swift */,
 				D2ACF8BA1DC45ABE0059A501 /* TopicCell.swift */,
@@ -258,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F11D911DC442750071955D /* OpenSans-Italic.ttf in Resources */,
+				D2ACF8CC1DC4B0340059A501 /* Pokemon Solid.ttf in Resources */,
 				D2F11D8E1DC442750071955D /* OpenSans-BoldItalic.ttf in Resources */,
+				D2ACF8CB1DC4B0340059A501 /* Pokemon Hollow.ttf in Resources */,
 				D2F11D761DC43EC10071955D /* LaunchScreen.storyboard in Resources */,
 				D2F11D951DC442750071955D /* OpenSans-Semibold.ttf in Resources */,
 				D2F11D8F1DC442750071955D /* OpenSans-ExtraBold.ttf in Resources */,
@@ -330,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F11D6E1DC43EC10071955D /* LoginVC.swift in Sources */,
+				D2ACF8D01DC4B1A00059A501 /* Question.swift in Sources */,
 				D2ACF8C81DC491E10059A501 /* RoomVC.swift in Sources */,
 				D2ACF8BB1DC45ABE0059A501 /* TopicCell.swift in Sources */,
 				D2ACF8B91DC45A000059A501 /* ChooseTopicVC.swift in Sources */,
@@ -338,6 +353,7 @@
 				D2ACF8BE1DC462740059A501 /* CircleImage.swift in Sources */,
 				D2ACF8C21DC48CC20059A501 /* CustomView.swift in Sources */,
 				D269B6291DC44AAC00FEE448 /* DataService.swift in Sources */,
+				D2ACF8CE1DC4B0CC0059A501 /* AnswerCell.swift in Sources */,
 				D2ACF8C61DC491CB0059A501 /* ProfileVC.swift in Sources */,
 				D2F11D9B1DC447490071955D /* Constants.swift in Sources */,
 				D2ACF8C41DC491BA0059A501 /* HomeVC.swift in Sources */,
