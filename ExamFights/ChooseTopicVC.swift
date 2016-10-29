@@ -11,7 +11,7 @@ import UIKit
 class ChooseTopicVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var isClicked = false
-    let topicImages = ["math","english","physics","chemistry","history","geography"]
+    let topicImages = ["ielts","toefl","toeic","math","english","physics","chemistry","history","geography"]
     var user_topics = [String]()
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {

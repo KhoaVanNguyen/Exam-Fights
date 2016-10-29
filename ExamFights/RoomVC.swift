@@ -24,6 +24,7 @@ class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     var currentQuestion = 0
     var answers = [String]()
+    var activeQuestion = ""
     var listQuesiton = [Question]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,9 +64,9 @@ class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                 DataService.ds.REF_QUESTIONS.child("\(active_question)").observeSingleEvent(of: .value, with: {
                     snapshot in
                     if let questionData = snapshot.value as? Dictionary<String,Any>{
-                        let postKey = snapshot.key
-                        let question = Question(key: postKey, questionData: questionData)
-                        
+                        let questionKey = snapshot.key
+                        let question = Question(key: questionKey, questionData: questionData)
+                        self.activeQuestion = questionKey
                         self.listQuesiton.append(question)
                         
                         DataService.ds.listQuestion.append(question)
@@ -134,7 +135,9 @@ class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? AnswerCell{
             cell.checkImg.isHidden = false
-          
+            
+        
+            DataService.ds.REF_ROOM.child("roomid").child("questions").child(activeQuestion).child("\(UserDefaults.standard.value(forKey: USER_ID)!)").setValue(indexPath.row)
         }
     }
     
