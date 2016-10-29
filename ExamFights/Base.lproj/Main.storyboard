@@ -430,11 +430,34 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5N3-9j-gJ5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhj-2A-zyP">
+                                        <rect key="frame" x="8" y="12" width="54" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Cic-ru-H1w"/>
+                                            <constraint firstAttribute="width" constant="54" id="b4n-22-5qe"/>
+                                        </constraints>
+                                        <state key="normal" image="home_btn"/>
+                                        <connections>
+                                            <segue destination="aiX-ZP-rgk" kind="show" id="w1I-LU-sEg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="hhj-2A-zyP" firstAttribute="leading" secondItem="5N3-9j-gJ5" secondAttribute="leading" constant="8" id="Edi-Ac-Ky9"/>
                                     <constraint firstAttribute="height" constant="60" id="MI8-Rs-pOH"/>
+                                    <constraint firstItem="hhj-2A-zyP" firstAttribute="top" secondItem="5N3-9j-gJ5" secondAttribute="top" constant="12" id="u7w-6X-8XW"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explain1" translatesAutoresizingMaskIntoConstraints="NO" id="kh2-g8-U7k">
+                                <rect key="frame" x="16" y="82" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explain1" translatesAutoresizingMaskIntoConstraints="NO" id="wKA-Pd-bsT">
+                                <rect key="frame" x="16" y="248" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -446,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzI-8v-KNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="1574.6626686656673"/>
+            <point key="canvasLocation" x="1937" y="1595"/>
         </scene>
         <!--Hồ Sơ-->
         <scene sceneID="0eK-cb-Cvp">
@@ -481,9 +504,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6V-2y-UHA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exam Fights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPb-je-jjf">
+                                        <rect key="frame" x="34" y="14" width="307" height="33"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.35686274509803922" green="0.76078431372549016" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iPb-je-jjf" secondAttribute="trailing" constant="34" id="RnS-D8-uHX"/>
+                                    <constraint firstItem="iPb-je-jjf" firstAttribute="leading" secondItem="m6V-2y-UHA" secondAttribute="leading" constant="34" id="SpH-Mp-KcQ"/>
+                                    <constraint firstItem="iPb-je-jjf" firstAttribute="top" secondItem="m6V-2y-UHA" secondAttribute="top" constant="14" id="TFh-dF-Ndz"/>
                                     <constraint firstAttribute="height" constant="60" id="eEr-tD-gBZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="iPb-je-jjf" secondAttribute="bottom" constant="13" id="n4w-1x-oHs"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="I5Q-WU-uSs">
@@ -563,6 +598,11 @@
                                     <constraint firstAttribute="height" constant="80" id="eqC-PE-Gin"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Re-uF-67g" customClass="CustomView" customModule="ExamFights" customModuleProvider="target">
+                                <rect key="frame" x="10" y="297" width="349" height="305"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -608,6 +648,7 @@
         <image name="bebe" width="900" height="900"/>
         <image name="charlie" width="601" height="602"/>
         <image name="check" width="64" height="64"/>
+        <image name="explain1" width="454" height="176"/>
         <image name="facebook" width="64" height="64"/>
         <image name="fight" width="25" height="25"/>
         <image name="gaming" width="512" height="512"/>
@@ -620,4 +661,7 @@
         <image name="sontung" width="585" height="619"/>
         <image name="trending_fire" width="32" height="43"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="w1I-LU-sEg"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D269B6271DC448C300FEE448 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269B6261DC448C300FEE448 /* CustomButton.swift */; };
 		D269B6291DC44AAC00FEE448 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269B6281DC44AAC00FEE448 /* DataService.swift */; };
+		D27978881DC5289C00A1798C /* Pods_ExamFights.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10056F973EC4388D8386BA98 /* Pods_ExamFights.framework */; };
 		D2A301D81DC4E44C00F11022 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A301D71DC4E44C00F11022 /* Room.swift */; };
 		D2A301DA1DC5198C00F11022 /* ExplainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A301D91DC5198C00F11022 /* ExplainVC.swift */; };
 		D2ACF8B91DC45A000059A501 /* ChooseTopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8B81DC45A000059A501 /* ChooseTopicVC.swift */; };
@@ -91,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D27978881DC5289C00A1798C /* Pods_ExamFights.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
