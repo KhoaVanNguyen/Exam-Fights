@@ -10,12 +10,12 @@ Các tính năng chính:
 - Bảng xếp hạng người dùng có thành tích cao
 
 Login Screen:
-![Alt text](https://github.com/KhoaVanNguyen/Exam-Fights/blob/master/screenshots/login.png?raw=true "Login")
+![Alt text](https://github.com/KhoaVanNguyen/Exam-Fights/blob/master/screenshots/login.png =750x1334 "Login")
 
 Home Screen:
 
-![Alt text](https://github.com/KhoaVanNguyen/Exam-Fights/blob/master/screenshots/home.png?raw=true "Home")
+![Alt text](https://github.com/KhoaVanNguyen/Exam-Fights/blob/master/screenshots/home.png =750x1334 "Home")
 
 Fight Screen:
 
-![Alt text](https://github.com/KhoaVanNguyen/Exam-Fights/blob/master/screenshots/fight.png?raw=true "Fight")
+![Alt text](https://github.com/KhoaVanNguyen/Exam-Fights/blob/master/screenshots/fight.png =750x1334 "Fight")

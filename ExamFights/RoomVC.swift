@@ -17,7 +17,7 @@ class RoomVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataS
     
     var tempImages = ["A","B","C","D"]
     
-    var currentQuestion = 2
+    var currentQuestion = 0
     var answers = [String]()
     var listQuesiton = [Question]()
     override func viewDidLoad() {
