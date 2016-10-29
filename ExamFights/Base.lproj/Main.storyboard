@@ -269,16 +269,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-5O-pqI">
-                                <rect key="frame" x="4" y="10" width="150" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-5O-pqI">
+                                <rect key="frame" x="4" y="20" width="150" height="40"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash_button" translatesAutoresizingMaskIntoConstraints="NO" id="g9E-3j-DCd" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sontung" translatesAutoresizingMaskIntoConstraints="NO" id="g9E-3j-DCd" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash_button" translatesAutoresizingMaskIntoConstraints="NO" id="PSC-ls-sOv" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charlie" translatesAutoresizingMaskIntoConstraints="NO" id="PSC-ls-sOv" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="50" height="40"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash_button" translatesAutoresizingMaskIntoConstraints="NO" id="Hbm-dj-JdR" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2013-miley-cyrus" translatesAutoresizingMaskIntoConstraints="NO" id="Hbm-dj-JdR" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
                                         <rect key="frame" x="100" y="0.0" width="50" height="40"/>
                                     </imageView>
                                 </subviews>
@@ -287,16 +287,16 @@
                                     <constraint firstAttribute="width" constant="150" id="ere-sy-ttX"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TbQ-1J-mBg">
-                                <rect key="frame" x="221" y="10" width="150" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TbQ-1J-mBg">
+                                <rect key="frame" x="221" y="20" width="150" height="40"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash_button" translatesAutoresizingMaskIntoConstraints="NO" id="DWi-1t-zgK" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noo" translatesAutoresizingMaskIntoConstraints="NO" id="DWi-1t-zgK" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash_button" translatesAutoresizingMaskIntoConstraints="NO" id="Zz2-0K-48w" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngoctrinh" translatesAutoresizingMaskIntoConstraints="NO" id="Zz2-0K-48w" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="50" height="40"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flash_button" translatesAutoresizingMaskIntoConstraints="NO" id="zX5-Wh-k0W" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bebe" translatesAutoresizingMaskIntoConstraints="NO" id="zX5-Wh-k0W" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
                                         <rect key="frame" x="100" y="0.0" width="50" height="40"/>
                                     </imageView>
                                 </subviews>
@@ -306,7 +306,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Câu 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCH-84-T4B">
-                                <rect key="frame" x="162" y="10" width="50" height="40"/>
+                                <rect key="frame" x="162" y="20" width="50" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3fd-Gu-lZS"/>
                                     <constraint firstAttribute="width" constant="50" id="d2T-4J-Ptc"/>
@@ -315,18 +315,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="465" translatesAutoresizingMaskIntoConstraints="NO" id="CmF-Hk-1VW">
+                                <rect key="frame" x="20" y="75" width="339" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TbQ-1J-mBg" secondAttribute="trailing" constant="4" id="36Y-9l-FVK"/>
                             <constraint firstItem="uCH-84-T4B" firstAttribute="centerX" secondItem="5LH-vW-VGZ" secondAttribute="centerX" id="D6H-Xl-Oqc"/>
-                            <constraint firstItem="PvF-5O-pqI" firstAttribute="top" secondItem="5LH-vW-VGZ" secondAttribute="top" constant="10" id="Sxm-dd-yjN"/>
-                            <constraint firstItem="uCH-84-T4B" firstAttribute="top" secondItem="5LH-vW-VGZ" secondAttribute="top" constant="10" id="eGo-6A-a8k"/>
-                            <constraint firstItem="TbQ-1J-mBg" firstAttribute="top" secondItem="5LH-vW-VGZ" secondAttribute="top" constant="10" id="eN5-pr-Uvm"/>
+                            <constraint firstItem="PvF-5O-pqI" firstAttribute="top" secondItem="5LH-vW-VGZ" secondAttribute="top" constant="20" id="Sxm-dd-yjN"/>
+                            <constraint firstItem="uCH-84-T4B" firstAttribute="top" secondItem="5LH-vW-VGZ" secondAttribute="top" constant="20" id="eGo-6A-a8k"/>
+                            <constraint firstItem="TbQ-1J-mBg" firstAttribute="top" secondItem="5LH-vW-VGZ" secondAttribute="top" constant="20" id="eN5-pr-Uvm"/>
                             <constraint firstItem="PvF-5O-pqI" firstAttribute="leading" secondItem="5LH-vW-VGZ" secondAttribute="leading" constant="4" id="vG4-6n-nrt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Thi đấu" image="fight" badgeValue="1" id="0Ru-HU-atQ"/>
+                    <connections>
+                        <outlet property="firstPlayerImg" destination="g9E-3j-DCd" id="iZY-mX-1S9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jv9-gC-FOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -489,15 +496,18 @@
     </scenes>
     <resources>
         <image name="2013-miley-cyrus" width="400" height="400"/>
+        <image name="465" width="277" height="78"/>
+        <image name="bebe" width="900" height="900"/>
         <image name="charlie" width="601" height="602"/>
         <image name="check" width="64" height="64"/>
         <image name="facebook" width="64" height="64"/>
         <image name="fight" width="25" height="25"/>
-        <image name="flash_button" width="50" height="50"/>
         <image name="gaming" width="512" height="512"/>
         <image name="home_btn" width="24" height="28"/>
         <image name="math" width="726" height="482"/>
         <image name="newmusical_btn" width="50" height="50"/>
+        <image name="ngoctrinh" width="720" height="480"/>
+        <image name="noo" width="1066" height="784"/>
         <image name="profile_btn" width="28" height="28"/>
         <image name="sontung" width="585" height="619"/>
         <image name="trending_fire" width="32" height="43"/>

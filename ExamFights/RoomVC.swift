@@ -9,27 +9,40 @@
 import UIKit
 
 class RoomVC: UIViewController {
-
+    @IBOutlet weak var firstPlayerImg: CircleImage!
+    var count = 300
+    var timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(RoomVC.update), userInfo: nil, repeats: true)
+    }
+  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+       
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func update() {
+        
+        if(count > 0){
+            
+            UIView.animate(withDuration: 1.0, animations: {
+                if ( self.count % 2 == 0 ){
+                    self.firstPlayerImg.alpha = 0
+                }else{
+                    self.firstPlayerImg.alpha = 1
+                }
+                
+            })
+            count -= 1
+         
+        }
+        
     }
-    
+   
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
