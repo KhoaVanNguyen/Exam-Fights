@@ -9,6 +9,7 @@ target 'ExamFights' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Charts', '2.2.5'
   # Pods for ExamFights
 
 end
