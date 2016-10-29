@@ -8,11 +8,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExamFights" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="ExamFights" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,18 +32,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-B8-D1s">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-B8-D1s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exam Fights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFX-7N-NJR">
+                                        <rect key="frame" x="63" y="-6" width="238" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login to fight with your friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E24-Er-Hfw">
+                                        <rect key="frame" x="37" y="156" width="300" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gaming" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-zq-aJ5">
+                                        <rect key="frame" x="129" y="67" width="117" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="w1M-sS-h9f"/>
+                                </constraints>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XyZ-Y5-ZHA" customClass="CustomTF" customModule="ExamFights" customModuleProvider="target">
+                                <rect key="frame" x="40" y="302" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZHV-V6-F79"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pd1-wU-3RR" customClass="CustomTF" customModule="ExamFights" customModuleProvider="target">
+                                <rect key="frame" x="40" y="380" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QkC-IC-YhW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ono-g0-f6C" customClass="CustomButton" customModule="ExamFights" customModuleProvider="target">
+                                <rect key="frame" x="40" y="460" width="295" height="40"/>
+                                <color key="backgroundColor" red="0.99582363696808507" green="0.41354046987115162" blue="0.096020506867512401" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ElA-No-bk9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSV-2c-tDV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pd1-wU-3RR" firstAttribute="top" secondItem="XyZ-Y5-ZHA" secondAttribute="bottom" constant="38" id="6MT-Mw-Hu2"/>
+                            <constraint firstItem="XyZ-Y5-ZHA" firstAttribute="top" secondItem="Pf8-B8-D1s" secondAttribute="bottom" constant="80" id="7Ug-Hr-1O4"/>
+                            <constraint firstItem="Ono-g0-f6C" firstAttribute="top" secondItem="Pd1-wU-3RR" secondAttribute="bottom" constant="40" id="Aoc-lG-mPA"/>
+                            <constraint firstAttribute="trailing" secondItem="XyZ-Y5-ZHA" secondAttribute="trailing" constant="40" id="CEr-0I-0mf"/>
+                            <constraint firstItem="Pf8-B8-D1s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F4o-ed-5js"/>
+                            <constraint firstItem="Pf8-B8-D1s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NjR-iV-1qB"/>
+                            <constraint firstItem="Ono-g0-f6C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="W7t-uC-m7Y"/>
+                            <constraint firstAttribute="trailing" secondItem="Ono-g0-f6C" secondAttribute="trailing" constant="40" id="b5V-vW-Jye"/>
+                            <constraint firstAttribute="trailing" secondItem="Pf8-B8-D1s" secondAttribute="trailing" id="dgQ-qA-Rub"/>
+                            <constraint firstItem="XyZ-Y5-ZHA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="xYU-X3-Yl3"/>
+                            <constraint firstAttribute="trailing" secondItem="Pd1-wU-3RR" secondAttribute="trailing" constant="40" id="xo0-yH-9f5"/>
+                            <constraint firstItem="Pd1-wU-3RR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="yq3-s8-q8I"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="XyZ-Y5-ZHA" id="HcU-JR-pSc"/>
+                        <outlet property="passwordTF" destination="Pd1-wU-3RR" id="KH4-I0-32Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gaming" width="512" height="512"/>
+    </resources>
 </document>
