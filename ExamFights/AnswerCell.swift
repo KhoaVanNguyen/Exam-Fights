@@ -15,9 +15,9 @@ class AnswerCell: UICollectionViewCell {
     
     
     
-    func configureCell( answerID : Int,  question : Question ){
+    func configureCell( correctAnswer : Int,  answer : String ){
         var questionLetter = "A"
-        switch question.quesitonID {
+        switch correctAnswer {
         case 0:
             questionLetter = "A"
         case 1:
@@ -29,7 +29,12 @@ class AnswerCell: UICollectionViewCell {
         default:
             questionLetter = "A"
         }
-        answerIDLbl.text = questionLetter
-        answerImage.image = UIImage(named: question.answers[answerID])
+        answerIDLbl.text = answer
+      // answerImage.image = UIImage(named: answer)
+    }
+    func showImage( imgUrl : String ){
+        
+        answerImage.image = UIImage(named: imgUrl)
+        
     }
 }

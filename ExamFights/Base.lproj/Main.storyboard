@@ -342,7 +342,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnswerCell" id="wdM-o8-DaR" customClass="AnswerCell" customModule="ExamFights" customModuleProvider="target">
-                                        <rect key="frame" x="1" y="0.0" width="342" height="112"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="342" height="112"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="112"/>
@@ -436,7 +436,7 @@
         <!--Trang chủ-->
         <scene sceneID="m5W-YE-bJN">
             <objects>
-                <viewController id="5Zu-ul-hmS" customClass="Home" sceneMemberID="viewController">
+                <viewController id="5Zu-ul-hmS" customClass="HomeVC" customModule="ExamFights" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bsz-kn-PRY"/>
                         <viewControllerLayoutGuide type="bottom" id="fAO-gr-n99"/>

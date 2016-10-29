@@ -19,6 +19,22 @@ class ChooseTopicVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+//        
+//        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+//            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+//                for snap in snapshot {
+//                    print("SNAP: \(snap)")
+//                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+//                        let key = snap.key
+//                        let post = Post(postKey: key, postData: postDict)
+//                        self.posts.append(post)
+//                    }
+//                }
+//            }
+//            self.tableView.reloadData()
+        
+        
 
     }
 
