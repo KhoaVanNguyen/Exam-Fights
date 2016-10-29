@@ -21,6 +21,18 @@ class DataService {
     private var _REF_QUESTION_TYPE = DB_BASE.child("QuestionType")
     private var _REF_EVENT = DB_BASE.child("Events")
     private var _REF_ROOMS = DB_BASE.child("Rooms")
+    
+    
+    private var _listQuestion = [Question]()
+    
+    var listQuestion : [Question]{
+        get{
+            return _listQuestion
+        }
+        set{
+            _listQuestion = newValue
+        }
+    }
     var REF_BASE : FIRDatabaseReference{
         return DB_BASE
     }

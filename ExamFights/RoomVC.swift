@@ -17,11 +17,16 @@ class RoomVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataS
     
     var tempImages = ["A","B","C","D"]
     
-    var currentQuestion = 0
+    var currentQuestion = 2
     var answers = [String]()
     var listQuesiton = [Question]()
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(RoomVC.update), userInfo: nil, repeats: true)
+        
         DataService.ds.REF_QUESTIONS.observe(.value, with: { snapshot in
             
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -33,47 +38,38 @@ class RoomVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataS
                         let question = Question(key: postKey, questionData: snap)
                         
                         self.listQuesiton.append(question)
+                        
+                        DataService.ds.listQuestion.append(question)
                         self.answers = question.answers
-                       print(question.correctAnser)
+                        print(question.correctAnser)
                     }
                 }
                 self.collectionView.reloadData()
-            
+                
                 
             }
         })
 
+    
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(RoomVC.update), userInfo: nil, repeats: true)
-        
-        }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        
-        
-       
-      
-    }
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return answers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCell", for: indexPath) as? AnswerCell{
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCell", for: indexPath) as? AnswerCell {
+//            let tempAnswer = DataService.ds.listQuestion[currentQuestion].answers
+           answers = DataService.ds.listQuestion[currentQuestion].answers
+            print(answers)
+            cell.configureCell(correctAnswer: 1, answer: answers[indexPath.row]  )
             
-//            answers = listQuesiton[currentQuestion].answers
-//            print(answers)
-//            cell.configureCell(correctAnswer: 1, answer: answers[indexPath.row]  )
-            cell.showImage(imgUrl: tempImages[indexPath.row])
+          
+            //  cell.showImage(imgUrl: tempImages[indexPath.row])
             return cell
         }
         else {
