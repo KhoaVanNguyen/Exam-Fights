@@ -7,34 +7,37 @@
 //
 
 import UIKit
-
-class AnswerCell: UICollectionViewCell {
-    @IBOutlet weak var answerIDLbl: UILabel!
+import Firebase
+class AnswerCell: UITableViewCell {
+ 
     
+    @IBOutlet weak var checkImg: UIImageView!
     @IBOutlet weak var answerImage: UIImageView!
     
     
     
     func configureCell( correctAnswer : Int,  answer : String ){
-        var questionLetter = "A"
-        switch correctAnswer {
-        case 0:
-            questionLetter = "A"
-        case 1:
-            questionLetter = "B"
-        case 2:
-            questionLetter = "C"
-        case 3:
-            questionLetter = "D"
-        default:
-            questionLetter = "A"
-        }
-        answerIDLbl.text = answer
-      // answerImage.image = UIImage(named: answer)
+        let ref = FIRStorage.storage().reference(forURL: answer)
+        ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+            if error != nil {
+                print("Download image error")
+            } else {
+                if let imgData = data {
+                    if let img = UIImage(data: imgData) {
+                        self.answerImage.image = img
+                    }
+                }
+            }
+        })
     }
+ 
+    
     func showImage( imgUrl : String ){
         
         answerImage.image = UIImage(named: imgUrl)
         
+    }
+    func showCheckImage(){
+        checkImg.isHidden = false
     }
 }

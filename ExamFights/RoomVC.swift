@@ -8,14 +8,19 @@
 
 import UIKit
 import Firebase
-class RoomVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource {
+class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var roundLbl: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var fifthPlayerImg: CircleImage!
+    @IBOutlet weak var questionImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var firstPlayerImg: CircleImage!
-    var count = 300
+    var count = 30
+    var round = 0;
     var timer = Timer()
     
     
-    var tempImages = ["A","B","C","D"]
+//    var tempImages = ["A","B","C","D"]
     
     var currentQuestion = 0
     var answers = [String]()
@@ -23,60 +28,115 @@ class RoomVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(RoomVC.update), userInfo: nil, repeats: true)
         
-        DataService.ds.REF_QUESTIONS.observe(.value, with: { snapshot in
+//        DataService.ds.REF_QUESTIONS.observe(.value, with: { snapshot in
+//            
+//            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+//                for snap in snapshot {
+//                    
+//                    let postKey = snap.key
+//                    
+//                    if let snap = snap.value as? Dictionary<String, Any>{
+//                        let question = Question(key: postKey, questionData: snap)
+//                        
+//                        self.listQuesiton.append(question)
+//                        
+//                        DataService.ds.listQuestion.append(question)
+//                        self.answers = question.answers
+//                    }
+//                }
+//                self.collectionView.reloadData()
+//                
+//            }
+//        })
+
+        /// Room:
+        
+        DataService.ds.REF_ROOM.child("roomid").child("active_question").observe(.value, with: {
+            snapshot in
             
-            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for snap in snapshot {
-                    
-                    let postKey = snap.key
-                    
-                    if let snap = snap.value as? Dictionary<String, Any>{
-                        let question = Question(key: postKey, questionData: snap)
+            if let active_question = snapshot.value{
+                
+                DataService.ds.REF_QUESTIONS.child("\(active_question)").observeSingleEvent(of: .value, with: {
+                    snapshot in
+                    if let questionData = snapshot.value as? Dictionary<String,Any>{
+                        let postKey = snapshot.key
+                        let question = Question(key: postKey, questionData: questionData)
                         
                         self.listQuesiton.append(question)
                         
                         DataService.ds.listQuestion.append(question)
                         self.answers = question.answers
-                        print(question.correctAnser)
+                        
+                        self.changeQuestionImage(imageUrl: question.questionImage)
+                        
+                        self.round += 1
+                        
+                        self.roundLbl.text = "\(self.round)"
+                        
+                        
+                        print(self.answers)
                     }
-                }
-                self.collectionView.reloadData()
-                
+                    self.tableView.reloadData()
+                    }
+                )
                 
             }
+            
         })
-
-    
+        DataService.ds.REF_ROOM.child("roomid").child("end_game").observe(.value, with: {
+            snapshot in
+                print("end_Game \(snapshot.value)")
+            if let snap = snapshot.value as? Int{
+                if  ( snap == 1 ){
+                    self.performSegue(withIdentifier: "ExplainVC", sender: nil)
+                }
+            }
+                
+            })
     }
     
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return answers.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCell", for: indexPath) as? AnswerCell {
-//            let tempAnswer = DataService.ds.listQuestion[currentQuestion].answers
-           answers = DataService.ds.listQuestion[currentQuestion].answers
-            print(answers)
-            cell.configureCell(correctAnswer: 1, answer: answers[indexPath.row]  )
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath) as? AnswerCell {
+            //            let tempAnswer = DataService.ds.listQuestion[currentQuestion].answers
             
-          
-            //  cell.showImage(imgUrl: tempImages[indexPath.row])
+            cell.configureCell(correctAnswer: 1, answer: answers[indexPath.row]  )
             return cell
         }
         else {
             return AnswerCell()
         }
+
     }
- 
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? AnswerCell{
+            cell.checkImg.isHidden = true
+           
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? AnswerCell{
+            cell.checkImg.isHidden = false
+          
+        }
+    }
     
     // function
     func update() {
@@ -84,11 +144,29 @@ class RoomVC: UIViewController , UICollectionViewDelegate, UICollectionViewDataS
             UIView.animate(withDuration: 1.0, animations: {
                 if ( self.count % 2 == 0 ){
                     self.firstPlayerImg.alpha = 0
+                    self.fifthPlayerImg.alpha = 0
                 }else{
                     self.firstPlayerImg.alpha = 1
+                    self.fifthPlayerImg.alpha = 1
                 }
             })
             count -= 1
         }
+    }
+    
+    func changeQuestionImage( imageUrl : String ){
+        let ref = FIRStorage.storage().reference(forURL: imageUrl)
+        ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+            if error != nil {
+                print("Download image error")
+            } else {
+                if let imgData = data {
+                    if let img = UIImage(data: imgData) {
+                        self.questionImage.image = img
+                    }
+                }
+            }
+        })
+
     }
 }

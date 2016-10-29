@@ -10,6 +10,7 @@
 		D269B6271DC448C300FEE448 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269B6261DC448C300FEE448 /* CustomButton.swift */; };
 		D269B6291DC44AAC00FEE448 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D269B6281DC44AAC00FEE448 /* DataService.swift */; };
 		D2A301D81DC4E44C00F11022 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A301D71DC4E44C00F11022 /* Room.swift */; };
+		D2A301DA1DC5198C00F11022 /* ExplainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A301D91DC5198C00F11022 /* ExplainVC.swift */; };
 		D2ACF8B91DC45A000059A501 /* ChooseTopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8B81DC45A000059A501 /* ChooseTopicVC.swift */; };
 		D2ACF8BB1DC45ABE0059A501 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8BA1DC45ABE0059A501 /* TopicCell.swift */; };
 		D2ACF8BE1DC462740059A501 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACF8BD1DC462740059A501 /* CircleImage.swift */; };
@@ -49,6 +50,7 @@
 		D269B6261DC448C300FEE448 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D269B6281DC44AAC00FEE448 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D2A301D71DC4E44C00F11022 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		D2A301D91DC5198C00F11022 /* ExplainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplainVC.swift; sourceTree = "<group>"; };
 		D2ACF8B81DC45A000059A501 /* ChooseTopicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTopicVC.swift; sourceTree = "<group>"; };
 		D2ACF8BA1DC45ABE0059A501 /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		D2ACF8BC1DC461260059A501 /* ExamFights.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExamFights.entitlements; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				D2ACF8C31DC491BA0059A501 /* HomeVC.swift */,
 				D2ACF8C51DC491CB0059A501 /* ProfileVC.swift */,
 				D2ACF8B81DC45A000059A501 /* ChooseTopicVC.swift */,
+				D2A301D91DC5198C00F11022 /* ExplainVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				D2A301D81DC4E44C00F11022 /* Room.swift in Sources */,
 				D2ACF8BB1DC45ABE0059A501 /* TopicCell.swift in Sources */,
 				D2ACF8B91DC45A000059A501 /* ChooseTopicVC.swift in Sources */,
+				D2A301DA1DC5198C00F11022 /* ExplainVC.swift in Sources */,
 				D2F11D6C1DC43EC10071955D /* AppDelegate.swift in Sources */,
 				D2F11D981DC443DE0071955D /* CustomTF.swift in Sources */,
 				D2ACF8BE1DC462740059A501 /* CircleImage.swift in Sources */,
