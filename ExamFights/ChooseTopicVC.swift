@@ -9,8 +9,10 @@
 import UIKit
 
 class ChooseTopicVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
-    let topicImages = ["math","english","physics","chemistry"]
+    
+    var isClicked = false
+    let topicImages = ["math","english","physics","chemistry","history","geography"]
+    var user_topics = [String]()
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,31 @@ class ChooseTopicVC: UIViewController, UICollectionViewDelegate, UICollectionVie
             return cell
         }else{
             return UICollectionViewCell()
+        }
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath) as! TopicCell
+//        cell.hiddenImage()
+//        user_topics.remove(at: indexPath.row)
+//    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // CHECK LATER
+      
+        let cell = collectionView.cellForItem(at: indexPath) as! TopicCell
+        cell.showCheckImage()
+        user_topics.append(topicImages[indexPath.row])
+     
+        
+    }
+  
+    @IBAction func nextBtn(_ sender: Any) {
+        let currentID = UserDefaults.standard.value(forKey: USER_ID)
+        for i in 0..<user_topics.count{
+            let q = QuestionType(id: i, name: user_topics[i])
+            DataService.ds.addUserTopic(questionType: q, data: [ "\(currentID!)" : true  ])
         }
     }
 }

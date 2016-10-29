@@ -16,3 +16,6 @@ let STATUS_USER_NOTFOUND = 17011
 
 
 let USER_ID = "uid"
+
+
+let DEFAULT_AVATAR = "https://firebasestorage.googleapis.com/v0/b/examfights.appspot.com/o/User_Profile%2Fdefault-avatar.png?alt=media&token=66ea6434-cd22-4262-8db1-282b1c6ca0f6"
