@@ -414,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jv9-gC-FOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="888.30584707646187"/>
+            <point key="canvasLocation" x="1998" y="897"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qGe-1F-1w4">
@@ -442,34 +442,416 @@
                                             <segue destination="aiX-ZP-rgk" kind="show" id="w1I-LU-sEg"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lời giải" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOw-UV-eaT">
+                                        <rect key="frame" x="98" y="15" width="179" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="179" id="5yo-cc-tfQ"/>
+                                            <constraint firstAttribute="height" constant="32" id="jpg-WM-AYV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="hhj-2A-zyP" firstAttribute="leading" secondItem="5N3-9j-gJ5" secondAttribute="leading" constant="8" id="Edi-Ac-Ky9"/>
                                     <constraint firstAttribute="height" constant="60" id="MI8-Rs-pOH"/>
+                                    <constraint firstItem="iOw-UV-eaT" firstAttribute="centerX" secondItem="5N3-9j-gJ5" secondAttribute="centerX" id="Ndz-gg-Vqa"/>
+                                    <constraint firstItem="iOw-UV-eaT" firstAttribute="top" secondItem="5N3-9j-gJ5" secondAttribute="top" constant="15" id="Qrg-iB-vJB"/>
                                     <constraint firstItem="hhj-2A-zyP" firstAttribute="top" secondItem="5N3-9j-gJ5" secondAttribute="top" constant="12" id="u7w-6X-8XW"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explain1" translatesAutoresizingMaskIntoConstraints="NO" id="kh2-g8-U7k">
-                                <rect key="frame" x="16" y="82" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explain1" translatesAutoresizingMaskIntoConstraints="NO" id="kh2-g8-U7k">
+                                <rect key="frame" x="0.0" y="68" width="375" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="2iW-79-eRN"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explain1" translatesAutoresizingMaskIntoConstraints="NO" id="wKA-Pd-bsT">
-                                <rect key="frame" x="16" y="248" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explain1" translatesAutoresizingMaskIntoConstraints="NO" id="wKA-Pd-bsT">
+                                <rect key="frame" x="0.0" y="193" width="375" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="SgS-i5-Jbb"/>
+                                </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explain1" translatesAutoresizingMaskIntoConstraints="NO" id="vMf-qt-QUV">
+                                <rect key="frame" x="0.0" y="318" width="375" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="bId-Ie-j4l"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZN8-Xx-jQt" customClass="CustomView" customModule="ExamFights" customModuleProvider="target">
+                                <rect key="frame" x="10" y="442" width="355" height="217"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="k70-yw-rgi">
+                                        <rect key="frame" x="8" y="8" width="140" height="40"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sontung" translatesAutoresizingMaskIntoConstraints="NO" id="EsV-35-RgL" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="JW1-Uh-FQL"/>
+                                                    <constraint firstAttribute="width" constant="40" id="bc3-TD-NeX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charlie" translatesAutoresizingMaskIntoConstraints="NO" id="iK0-t5-qPj" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="jNo-Rd-97A"/>
+                                                    <constraint firstAttribute="height" constant="40" id="xmq-a7-Hmw"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2013-miley-cyrus" translatesAutoresizingMaskIntoConstraints="NO" id="hks-8d-SZN" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="7CE-m8-qJm"/>
+                                                    <constraint firstAttribute="height" constant="40" id="yFD-Kw-xDH"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="8V6-XX-Zbr"/>
+                                            <constraint firstAttribute="height" constant="40" id="XOF-2B-Xbb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kgJ-zc-zsg">
+                                        <rect key="frame" x="197" y="8" width="150" height="40"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noo" translatesAutoresizingMaskIntoConstraints="NO" id="CDn-Th-3kL" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="10Y-wB-01H"/>
+                                                    <constraint firstAttribute="width" constant="40" id="45C-1J-gaM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ngoctrinh" translatesAutoresizingMaskIntoConstraints="NO" id="jar-gb-GgY" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                                <rect key="frame" x="55" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="9f6-1C-Y1i"/>
+                                                    <constraint firstAttribute="width" constant="40" id="gBN-Cd-enb"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bebe" translatesAutoresizingMaskIntoConstraints="NO" id="5CV-9h-mzo" customClass="CircleImage" customModule="ExamFights" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="I5H-Yq-zGU"/>
+                                                    <constraint firstAttribute="height" constant="40" id="YyY-97-A49"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="FOY-Eg-7eq"/>
+                                            <constraint firstAttribute="height" constant="40" id="OuN-Ps-Wja"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uqs-fq-OSW">
+                                        <rect key="frame" x="5" y="72" width="150" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w5-gb-YcN">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="50z-cX-UtG"/>
+                                                    <constraint firstAttribute="width" constant="40" id="R9D-3O-2Uy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOW-VL-GcZ">
+                                                <rect key="frame" x="55" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="BPg-mr-z5f"/>
+                                                    <constraint firstAttribute="height" constant="20" id="TsN-C5-0LF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFH-IB-XEb">
+                                                <rect key="frame" x="110" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Mx8-Vs-adL"/>
+                                                    <constraint firstAttribute="width" constant="40" id="RVb-sb-vWK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="ITA-av-qv6"/>
+                                            <constraint firstAttribute="width" constant="150" id="awb-m0-hi8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="5B5-hc-HRr">
+                                        <rect key="frame" x="201" y="73" width="150" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrg-Zy-YJW">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Ogh-IQ-CU5"/>
+                                                    <constraint firstAttribute="height" constant="20" id="a5x-LJ-fcF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuI-1n-Ub1">
+                                                <rect key="frame" x="55" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="RQR-Oh-Uey"/>
+                                                    <constraint firstAttribute="width" constant="40" id="rAA-fa-Vkv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiq-kS-OT6">
+                                                <rect key="frame" x="110" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.91325122117996216" green="0.057772181928157806" blue="0.077167056500911713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="aDC-Kp-Ni5"/>
+                                                    <constraint firstAttribute="width" constant="40" id="byt-YC-TCf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="pwU-tF-TnG"/>
+                                            <constraint firstAttribute="width" constant="150" id="wN4-4Y-sev"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DZk-zV-AYe">
+                                        <rect key="frame" x="4" y="117" width="150" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="499-S9-4P4">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Iuu-sX-p1B"/>
+                                                    <constraint firstAttribute="height" constant="20" id="yXh-n0-8rg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNo-S7-83W">
+                                                <rect key="frame" x="55" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.91325122117996216" green="0.057772181928157806" blue="0.077167056500911713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Pz3-q2-H1Q"/>
+                                                    <constraint firstAttribute="width" constant="40" id="vxt-bp-yCB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfA-IF-Ax4">
+                                                <rect key="frame" x="110" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="MSd-HW-Ddz"/>
+                                                    <constraint firstAttribute="height" constant="20" id="bhn-J3-pov"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="60d-C0-M13"/>
+                                            <constraint firstAttribute="height" constant="20" id="qO7-Cr-j2N"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="w8K-d0-cCa">
+                                        <rect key="frame" x="4" y="162" width="150" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfR-4q-UQm">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.91325122117996216" green="0.057772181928157806" blue="0.077167056500911713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Ohg-Ex-2re"/>
+                                                    <constraint firstAttribute="height" constant="20" id="xRG-IS-vcn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ph6-ST-PnR">
+                                                <rect key="frame" x="55" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.91325122117996216" green="0.057772181928157806" blue="0.077167056500911713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="08e-Hf-aE5"/>
+                                                    <constraint firstAttribute="width" constant="40" id="VdC-j8-gUI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AW9-4b-Hji">
+                                                <rect key="frame" x="110" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="7pH-9U-FhL"/>
+                                                    <constraint firstAttribute="height" constant="20" id="85t-6u-YRM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="jAA-V5-ZPD"/>
+                                            <constraint firstAttribute="width" constant="150" id="kLg-q8-20b"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oM1-tl-UAD">
+                                        <rect key="frame" x="201" y="118" width="150" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jm-hL-res">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.91325122117996216" green="0.057772181928157806" blue="0.077167056500911713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="4hc-FX-bbn"/>
+                                                    <constraint firstAttribute="width" constant="40" id="JnG-on-WEq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWv-QX-LPA">
+                                                <rect key="frame" x="55" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="7eM-9R-Yl5"/>
+                                                    <constraint firstAttribute="width" constant="40" id="viS-LA-WCX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWL-3L-Q4c">
+                                                <rect key="frame" x="110" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="dMs-DQ-4De"/>
+                                                    <constraint firstAttribute="height" constant="20" id="wxo-qH-R1K"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Ike-ym-MOE"/>
+                                            <constraint firstAttribute="width" constant="150" id="ngJ-Ea-eLw"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="9Tu-Lz-Kaa">
+                                        <rect key="frame" x="201" y="163" width="150" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrf-zx-NDf">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="3Z8-bm-Yjp"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Wi4-g9-hfN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkR-U6-eKO">
+                                                <rect key="frame" x="55" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.91325122117996216" green="0.057772181928157806" blue="0.077167056500911713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="APe-T8-IaG"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Ykf-Ba-q1E"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fja-40-uKb">
+                                                <rect key="frame" x="110" y="0.0" width="40" height="20"/>
+                                                <color key="backgroundColor" red="0.35686274509999999" green="0.76078431369999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="giU-JK-DjL"/>
+                                                    <constraint firstAttribute="width" constant="40" id="yTt-Dy-Gtc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Yyd-hd-wss"/>
+                                            <constraint firstAttribute="width" constant="150" id="dei-dy-1IX"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 - 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMh-3Z-dHR">
+                                        <rect key="frame" x="156" y="18" width="40" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="kEt-T3-E4y"/>
+                                            <constraint firstAttribute="width" constant="40" id="yHA-Ii-c5s"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oM1-tl-UAD" firstAttribute="top" secondItem="5B5-hc-HRr" secondAttribute="bottom" constant="25" id="Huo-Pa-dvy"/>
+                                    <constraint firstItem="w8K-d0-cCa" firstAttribute="leading" secondItem="ZN8-Xx-jQt" secondAttribute="leading" constant="4" id="JGT-Wb-lMD"/>
+                                    <constraint firstAttribute="trailing" secondItem="5B5-hc-HRr" secondAttribute="trailing" constant="4" id="KfG-NW-eB3"/>
+                                    <constraint firstItem="oMh-3Z-dHR" firstAttribute="top" secondItem="ZN8-Xx-jQt" secondAttribute="top" constant="18" id="Qjn-Gi-c5d"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Tu-Lz-Kaa" secondAttribute="trailing" constant="4" id="Wzc-vj-Ybt"/>
+                                    <constraint firstItem="uqs-fq-OSW" firstAttribute="top" secondItem="k70-yw-rgi" secondAttribute="bottom" constant="24" id="Xe5-CQ-q4G"/>
+                                    <constraint firstItem="k70-yw-rgi" firstAttribute="top" secondItem="ZN8-Xx-jQt" secondAttribute="top" constant="8" id="aES-H0-BxD"/>
+                                    <constraint firstItem="oMh-3Z-dHR" firstAttribute="leading" secondItem="k70-yw-rgi" secondAttribute="trailing" constant="8" id="cS1-VX-ERd"/>
+                                    <constraint firstItem="k70-yw-rgi" firstAttribute="leading" secondItem="ZN8-Xx-jQt" secondAttribute="leading" constant="8" id="cuW-vk-smR"/>
+                                    <constraint firstItem="9Tu-Lz-Kaa" firstAttribute="top" secondItem="oM1-tl-UAD" secondAttribute="bottom" constant="25" id="fls-2P-Fb3"/>
+                                    <constraint firstItem="w8K-d0-cCa" firstAttribute="top" secondItem="DZk-zV-AYe" secondAttribute="bottom" constant="25" id="iee-qL-d8q"/>
+                                    <constraint firstItem="uqs-fq-OSW" firstAttribute="leading" secondItem="ZN8-Xx-jQt" secondAttribute="leading" constant="4" id="iua-Z8-viQ"/>
+                                    <constraint firstItem="DZk-zV-AYe" firstAttribute="leading" secondItem="ZN8-Xx-jQt" secondAttribute="leading" constant="4" id="ivV-r2-JES"/>
+                                    <constraint firstAttribute="trailing" secondItem="kgJ-zc-zsg" secondAttribute="trailing" constant="8" id="lcE-j2-F3a"/>
+                                    <constraint firstAttribute="trailing" secondItem="oM1-tl-UAD" secondAttribute="trailing" constant="4" id="nJF-lZ-SyW"/>
+                                    <constraint firstItem="DZk-zV-AYe" firstAttribute="top" secondItem="uqs-fq-OSW" secondAttribute="bottom" constant="25" id="qya-gj-hdC"/>
+                                    <constraint firstItem="5B5-hc-HRr" firstAttribute="top" secondItem="kgJ-zc-zsg" secondAttribute="bottom" constant="25" id="xUM-8m-nV3"/>
+                                    <constraint firstItem="kgJ-zc-zsg" firstAttribute="top" secondItem="ZN8-Xx-jQt" secondAttribute="top" constant="8" id="xZj-3d-Nr8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5N3-9j-gJ5" firstAttribute="top" secondItem="Ppa-yv-Mbm" secondAttribute="top" id="2O0-4z-Jec"/>
+                            <constraint firstItem="vMf-qt-QUV" firstAttribute="leading" secondItem="Ppa-yv-Mbm" secondAttribute="leading" id="6oo-q2-YY0"/>
+                            <constraint firstItem="ZN8-Xx-jQt" firstAttribute="leading" secondItem="Ppa-yv-Mbm" secondAttribute="leading" constant="10" id="APl-q3-rnj"/>
                             <constraint firstAttribute="trailing" secondItem="5N3-9j-gJ5" secondAttribute="trailing" id="KhT-4S-BcN"/>
+                            <constraint firstItem="ZN8-Xx-jQt" firstAttribute="top" secondItem="vMf-qt-QUV" secondAttribute="bottom" constant="4" id="RGo-oC-JhG"/>
+                            <constraint firstItem="vMf-qt-QUV" firstAttribute="top" secondItem="wKA-Pd-bsT" secondAttribute="bottom" constant="5" id="RXi-Or-PH5"/>
                             <constraint firstItem="5N3-9j-gJ5" firstAttribute="leading" secondItem="Ppa-yv-Mbm" secondAttribute="leading" id="S8m-fD-gTA"/>
+                            <constraint firstItem="wKA-Pd-bsT" firstAttribute="top" secondItem="kh2-g8-U7k" secondAttribute="bottom" constant="5" id="VU9-p7-TQv"/>
+                            <constraint firstItem="g94-vK-Bpq" firstAttribute="top" secondItem="ZN8-Xx-jQt" secondAttribute="bottom" constant="8" id="Ycp-54-zPk"/>
+                            <constraint firstAttribute="trailing" secondItem="kh2-g8-U7k" secondAttribute="trailing" id="aBz-nl-jJw"/>
+                            <constraint firstItem="wKA-Pd-bsT" firstAttribute="leading" secondItem="Ppa-yv-Mbm" secondAttribute="leading" id="f9V-9d-N9W"/>
+                            <constraint firstAttribute="trailing" secondItem="wKA-Pd-bsT" secondAttribute="trailing" id="ghQ-lJ-Kpd"/>
+                            <constraint firstAttribute="trailing" secondItem="vMf-qt-QUV" secondAttribute="trailing" id="hDI-sS-Gvd"/>
+                            <constraint firstItem="kh2-g8-U7k" firstAttribute="leading" secondItem="Ppa-yv-Mbm" secondAttribute="leading" id="ld5-ND-ph4"/>
+                            <constraint firstAttribute="trailing" secondItem="ZN8-Xx-jQt" secondAttribute="trailing" constant="10" id="sdT-fJ-oDI"/>
+                            <constraint firstItem="kh2-g8-U7k" firstAttribute="top" secondItem="5N3-9j-gJ5" secondAttribute="bottom" constant="8" id="vVF-Fp-Wbo"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzI-8v-KNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="1595"/>
+            <point key="canvasLocation" x="1344.8" y="1613.3433283358322"/>
         </scene>
         <!--Hồ Sơ-->
         <scene sceneID="0eK-cb-Cvp">
