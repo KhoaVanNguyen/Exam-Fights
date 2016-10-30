@@ -20,3 +20,8 @@ Home Screen:
 Fight Screen:
 
 ![Alt text](screenshots/fight.png)
+
+Result Screen:
+
+
+![Alt text](screenshots/explain.png)
