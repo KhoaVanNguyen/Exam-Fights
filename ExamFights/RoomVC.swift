@@ -21,7 +21,7 @@ class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     
 //    var tempImages = ["A","B","C","D"]
-    
+    var isNextRound = false
     var currentQuestion = 0
     var answers = [String]()
     var activeQuestion = ""
@@ -77,8 +77,7 @@ class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
                         self.round += 1
                         
                         self.roundLbl.text = "\(self.round)"
-                        
-                        
+                        self.isNextRound = true
                         print(self.answers)
                     }
                     self.tableView.reloadData()
@@ -113,6 +112,7 @@ class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
             //            let tempAnswer = DataService.ds.listQuestion[currentQuestion].answers
             
             cell.configureCell(correctAnswer: 1, answer: answers[indexPath.row]  )
+            cell.checkImg.isHidden = true
             return cell
         }
         else {
@@ -127,14 +127,19 @@ class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? AnswerCell{
-            cell.checkImg.isHidden = true
+           
+                cell.checkImg.isHidden = true
+     
            
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? AnswerCell{
-            cell.checkImg.isHidden = false
+          
+                cell.checkImg.isHidden = false
+            
+         
             
         
             DataService.ds.REF_ROOM.child("roomid").child("questions").child(activeQuestion).child("\(UserDefaults.standard.value(forKey: USER_ID)!)").setValue(indexPath.row)
@@ -156,7 +161,6 @@ class RoomVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
             count -= 1
         }
     }
-    
     func changeQuestionImage( imageUrl : String ){
         let ref = FIRStorage.storage().reference(forURL: imageUrl)
         ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
