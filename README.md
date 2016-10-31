@@ -14,7 +14,7 @@ thông báo để user làm lại những câu này.
 
 
 
-[![Alt text](screenshots/youtube.png)](https://www.youtube.com/watch?v=VID)
+[![Alt text](screenshots/youtube.png)](https://www.youtube.com/watch?v=7NZpC1VWVJ8)
 
 
 
